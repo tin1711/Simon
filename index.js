@@ -71,7 +71,7 @@ function checkAnswer(index){
       
     },1000);
     
-    $(document).one("keydown",function(){
+    $(document).one("keydown","tap",function(){
       starOver();
      
     });
@@ -82,13 +82,13 @@ function checkAnswer(index){
 
 
 
-$(document).one("keydown",function(){
+$(document).one("keydown","tap",function(){
   $("#level-title").text("level "+level);
   nextSequence();
 });
 
 
-$(".btn").on("click",function(){
+$(".btn").on("click","tap",function(){
   userChosenColour=this.id;
   userClickedPattern.push(userChosenColour);
   playsound(userChosenColour);
